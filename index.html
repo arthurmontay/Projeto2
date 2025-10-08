@@ -1,0 +1,87 @@
+<doctype html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="projeto1.css" />
+    </head>
+
+    <body>
+      <div id="barra">
+        <a href="#um">Inicio</a>
+        <a href="#dois">Produtos</a>
+        <a href="#tres">Contato</a>
+      </div>
+
+      <div id="todo">
+        <div id="um" class="secao">
+          <img src="Imagens/kkk.png" />
+          <h2 class="h">Arthur Montay</h2>
+          <h3>Trabalha com programa</h3>
+          <button><a href="#dois">Ver Projetos</a></button>
+        </div>
+
+        <div id="dois" class="secao">
+          <h2 class="h">Produtos</h2>
+          <h3>Meus trabalhos</h3>
+          <div class="dp">
+            <h2>Portifólio Pessoal</h2>
+            <p> Meu site de apresentação profissional com informações e projetos.</p>
+            <button><a href="">Ver Projetos</a></button>
+          </div>
+
+          <div class="dp">
+            <h2>Loja Virtual</h2>
+            <p>Protótipo de e-commerce com carrinho de compras em JavaScript.</p>
+            <button><a href="">Ver Projetos</a></button>
+          </div>
+
+          <div class="dp">
+            <h2>Dashboard de Dados</h2>
+            <p>Painel interativo para visualização de métricas e gráficos.</p>
+            <button><a href="">Ver Projetos</a></button>
+          </div>
+        </div>
+
+        <div id="tres" class="secao">
+          <center>
+            <h2>Contato</h2>
+            <p>Entre em contato comigo preenchendo o formulário abaixo.</p>
+            <div id="formulario">
+              <form id="whatsappForm">
+              <input type="text" id="nome" class="texto" placeholder="Seu Nome" required>
+              <input type="email" id="email" class="texto" placeholder="Seu email" required>
+
+              <textarea placeholder="Digite sua mensagem" required id="mensagem"></textarea>
+
+              <button>Enviar no Whatsapp</button>
+
+              </form>
+
+              <h3>Me siga nas redes</h3>
+
+              <div id="link">
+               <a href="https://www.youtube.com/@silmaracirqueira5601">Youtube</a>
+               <a href="https://www.instagram.com/thiagomtd?igsh=dHF4azA4NDA3bWRh">Instagram</a>
+               <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a>
+            </div>
+          </center>
+        </div>
+        <script>
+
+        document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
+        const texto = `Olá, meu nome é ${nome}) (${email}) e gostaria de falar: ${mensagem}`;
+        const url= `https://wa.me/5527998169324?text=${encodeURIComponent(texto)}`;
+
+        window.open(url, "_blank");
+        });
+        </script>
+      </div>
+    </body>
+  </html>
+</doctype>
